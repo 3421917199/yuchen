@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash.Meta
-# 创建时间：2023-10-02 23:51:50
+# 创建时间：2023-10-03 12:02:33
 # 使用模版：V2RaySE 默认模版
-# 节点数量：2
+# 节点数量：3
 ####################################
 # !!当前配置文件请使用基于 Clash.Meta 内核程序
 mixed-port: 7890
@@ -86,8 +86,9 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"Alibaba+HongKong","type":"vless","server":"47.242.174.27","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
-  - {"name":"Alibaba++Korea","type":"vless","server":"132.145.81.224","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+HongKong","type":"vless","server":"47.242.174.27","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"Alibaba++Korea_1","type":"vless","server":"132.145.81.224","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"Alibaba++Korea_2","type":"vless","server":"132.145.81.224","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -95,7 +96,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -103,7 +105,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -111,28 +114,32 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -156,7 +163,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - Alibaba+HongKong
-      - Alibaba++Korea
+      - Alibaba++Korea_1
+      - Alibaba++Korea_2
 
 rules:
 # 本地/局域网地址

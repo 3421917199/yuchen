@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash.Meta
-# 创建时间：2023-10-03 12:02:33
+# 创建时间：2023-10-03 12:08:13
 # 使用模版：V2RaySE 默认模版
-# 节点数量：3
+# 节点数量：9
 ####################################
 # !!当前配置文件请使用基于 Clash.Meta 内核程序
 mixed-port: 7890
@@ -86,60 +86,102 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"Alibaba+HongKong","type":"vless","server":"47.242.174.27","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"Alibaba++Korea_1","type":"vless","server":"132.145.81.224","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"Alibaba++Korea_2","type":"vless","server":"132.145.81.224","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+Singapore_1","type":"vless","server":"8.222.244.123","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba++Korea","type":"vless","server":"132.145.81.224","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+HongKong_1","type":"vless","server":"132.145.80.220","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+HongKong_2","type":"vless","server":"47.242.174.27","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+Singapore_2","type":"vless","server":"8.219.242.37","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+Singapore_3","type":"vless","server":"8.219.228.186","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+HongKong_3","type":"vless","server":"47.243.18.77","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}}}
+  - {"name":"Alibaba+Singapore_4","type":"vless","server":"8.219.228.186","port":8080,"uuid":"c20c7768-6e33-4319-a18e-11d7c78580cc","tls":false,"servername":"worker-aged-block-fbd5.3421917199.workers.dev","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker-aged-block-fbd5.3421917199.workers.dev"}},"client-fingerprint":"randomized"}
+  - {"name":"莓果节点","type":"vless","server":"168.138.180.229","port":443,"uuid":"e28bb3f8-e64a-4419-9496-33c46220354b","tls":true,"servername":"sdgf.bdfstt.sbs","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"sdgf.bdfstt.sbs"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -162,9 +204,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Alibaba+HongKong
-      - Alibaba++Korea_1
-      - Alibaba++Korea_2
+      - Alibaba+Singapore_1
+      - Alibaba++Korea
+      - Alibaba+HongKong_1
+      - Alibaba+HongKong_2
+      - Alibaba+Singapore_2
+      - Alibaba+Singapore_3
+      - Alibaba+HongKong_3
+      - Alibaba+Singapore_4
+      - 莓果节点
 
 rules:
 # 本地/局域网地址
